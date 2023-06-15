@@ -1,0 +1,73 @@
+/* 清除内外边距 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    position: relative;
+    width: 800px;
+    height: 480px;
+    border: 1px solid #000;
+    margin: 20px auto;  /* 容器水平居中 */
+    overflow: hidden;  /* 溢出隐藏 */
+}
+
+.imgs-list {
+    position: absolute;
+    left: 0;
+    width: 4800px;  /* 图片容器的宽度一定要够 */
+    list-style: none;
+}
+
+.imgs-list .img-item img {
+    float: left;  /* 开启浮动 */
+    width: 800px;
+    height: 480px;
+}
+
+#leftBtn,#rightBtn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);  /* 配合top实现居中 */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #000;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.5);  /* 半透明 */
+    cursor: pointer;
+}
+
+#rightBtn {
+    left: auto;
+    right: 10px
+}
+
+#leftBtn:hover,
+#rightBtn:hover,
+.nav-list .nav-item:hover,
+.nav-list .nav-item.active {
+    background-color: #fff;
+}
+
+.nav-list {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+}
+
+.nav-list .nav-item {
+    float: left;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}

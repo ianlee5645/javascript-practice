@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Carousel_optimize</title>
+</head>
+<body>
+    <!-- 外层容器 -->
+    <div id="container">
+        <!-- 图片列表,需要把第一张图片追加在末尾，以实现无缝衔接的效果 -->
+        <ul class="imgs-list">
+            <li class="img-item"><a href="javascript:;"><img src="./assets/jpg1.jpg" alt=""></a></li>
+            <li class="img-item"><a href="javascript:;"><img src="./assets/jpg2.jpg" alt=""></li>
+            <li class="img-item"><a href="javascript:;"><img src="./assets/jpg3.jpg" alt=""></li>
+            <li class="img-item"><a href="javascript:;"><img src="./assets/jpg4.jpg" alt=""></li>
+            <li class="img-item"><a href="javascript:;"><img src="./assets/jpg5.jpg" alt=""></li>
+            <li class="img-item"><a href="javascript:;"><img src="./assets/jpg1.jpg" alt=""></li>
+        </ul>
+        
+        <!-- 按钮 -->
+        <div id="leftBtn">&lt;</div>
+        <div id="rightBtn">&gt;</div>
+
+        <!-- 圆点,存储了对应的索引 -->
+        <ul class="nav-list">
+            <li class="nav-item active" data-index="0"></li>
+            <li class="nav-item" data-index="1"></li>
+            <li class="nav-item" data-index="2"></li>
+            <li class="nav-item" data-index="3"></li>
+            <li class="nav-item" data-index="4"></li>
+        </ul>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
