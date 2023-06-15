@@ -1,0 +1,87 @@
+.wrap {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 100px auto;  /* 水平居中 */
+    overflow: hidden;  /* 溢出隐藏 */
+}
+
+.imgs-wrap {
+    position: absolute;
+    left: 0;
+    display: flex;  /* flex布局让图片能够在一行显示 */
+    width: 3600px;
+    height: 400px;
+    padding: 0;
+    margin: 0;
+}
+
+.imgs-wrap .img {
+    list-style: none;
+    width: 600px;
+    height: 400px;
+    border: 1px solid #ccc;
+    margin-left: -1px;  /* 解决相邻两个li元素之间边框重复的问题 */
+}
+
+.imgs-wrap .img img {
+    display: block;  /* 解决图片下方出现空白的问题，实际上是由于对齐方式的原因 */
+    width: 600px;
+    height: 400px;
+}
+
+.left,.right {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);  /* 配合top实现居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .5);
+    cursor: pointer;
+    user-select: none;  /* 设置不能选中内容 */
+}
+
+.left:hover,.right:hover {
+    background-color: #ccc;
+}
+
+.right {
+    left: auto;
+    right: 10px;
+}
+
+.number-wrap {
+    position: absolute;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.number-wrap .num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 9px;
+    background-color: rgba(0, 0, 0, .5);
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.number-wrap .num.active {
+    background-color: #ccc;
+}
