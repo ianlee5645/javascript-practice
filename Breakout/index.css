@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.btn {
+    background-color: #000;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#showBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.container canvas {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.container h1 {
+    text-align: center;
+    margin: 20px;
+}
+
+.container p {
+    text-align: center;
+    color: #000;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.rules {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    padding: 20px;
+    width: 300px;
+    background-color: #444;
+    color: #fff;
+    transform: translateY(-50%);
+    border-radius: 5px;
+}
+
+.rules p {
+    margin: 10px 0;
+}
